@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Папки и файлы только для локального использования:
+
+/Lecture_1/
+/Seminar_1/
+Task_examples.md
+
 # User-specific files
 *.rsuser
 *.suo
