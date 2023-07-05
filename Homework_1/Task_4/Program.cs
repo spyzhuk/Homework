@@ -16,15 +16,11 @@ int max = a;
 
 if(b>max)
 {
-    max = b;
-    Console.Write($"Максимальное из чисел: {b}");
+    max = b;  
 }
-else if(c>max)
+if(c>max)
 {
     max = c;
-    Console.Write($"Максимальное из чисел: {c}");
 }
-else
-{
-    Console.Write($"Максимальное из чисел: {max}");
-}
+
+Console.Write($"Максимальное из чисел: {max}");
