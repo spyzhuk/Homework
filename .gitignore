@@ -4,9 +4,11 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # Папки и файлы только для локального использования:
-
-/Lecture_1/
-/Seminar_1/
+.gitignore
+.vscode/
+.vscode/settings.json
+Lecture_1/
+Seminar_1/
 Task_examples.md
 
 # User-specific files
@@ -383,12 +385,12 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+# *.code-workspace
 
 # Local History for Visual Studio Code
 .history/
