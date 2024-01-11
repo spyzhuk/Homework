@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            background-color: whitesmoke;
+        }
+        html{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            background-color: rgb(232, 231, 231);
+        }
+        .block1{
+            line-height: 50px;
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            padding:55px;
+        }
+        .block2{
+            line-height: 50px;
+            position: absolute;
+            top:60%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            padding:30px;
+        }
+        h3{
+            text-align: center;
+        }
+        #arrayBefore,#arrayAfter{
+            border: 1px dotted;
+            padding: 5px;
+        }
+        #favButton{
+            font-weight: bold;
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body onload="ChangeArray()">
+    <div class="block1">
+        <h3> Задание 1 </h3>
+        <p> Название моего любимого фильма: <button id="favButton" onclick="PromptMe()">Ввести</button></p>
+        <p id="insertHint1"></p>
+        <p id="insertHint2"></p>
+    </div>
+    <div class="block2">
+        <h3> Задание 2 </h3>    
+        <span> Массив до изменения: </span>
+        <span id="arrayBefore"> </span>
+        <br>
+        <span> Массив после изменения: </span>
+        <span id="arrayAfter"> </span>
+    </div>
+    <script>
+        function PromptMe(){
+            let showPrompt = prompt("Введите название моего любимого фильма");
+            alert(showPrompt);
+            if (showPrompt == "Апокалипсис сегодня") alert("Верный ответ!");
+            else {alert("Попробуйте еще раз");
+                document.getElementById("insertHint1").innerHTML = `"${showPrompt}" это неверный вариант.`;
+                document.getElementById("insertHint2").innerHTML =`Подсказка: год: 1979, Режиссер: Francis Ford Coppola`}
+        }
+        function ChangeArray(){
+            let originArray = ["a","b","c"];
+            document.getElementById("arrayBefore").innerHTML = originArray.toString();
+            originArray[0]= "Word";
+            originArray[1]= "Fly to the moon";
+            originArray[2]= "G";
+            document.getElementById("arrayAfter").innerHTML = originArray.toString();
+        }
+    </script>
+</body>
+</html>
